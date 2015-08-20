@@ -11,7 +11,7 @@ function getNextPreviousCategory($currentCategory) {
 
     $data['preindex'] = 0;
     $data['nextindex'] = 0;
-    if (count(parentcategories) > 0) {
+    if (count($parentcategories) > 0) {
         foreach ($parentcategories as $pcateid) {
 
             $_pcate = Mage::getModel('catalog/category')->load($pcateid->getId());
@@ -29,4 +29,5 @@ function getNextPreviousCategory($currentCategory) {
 
     return $data;
 }
+
 
