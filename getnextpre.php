@@ -18,8 +18,8 @@ function getNextPreviousCategory($currentCategory) {
             if ($currentCategory->getId() == $pcateid->getId()) {
                 $data['cpos'] = $count;
 
-                $data['preindex'] = $cpos - 1;
-                $data['nextindex'] = $cpos + 1;
+                $data['preindex'] = $count - 1;
+                $data['nextindex'] = $count + 1;
             }
 
             $positoinindex[$count] = $_pcate->getURL();
